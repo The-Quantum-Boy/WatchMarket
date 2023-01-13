@@ -1,0 +1,23 @@
+.product{
+   margin-top: 10px;
+   padding: 10px;
+   border: 1px solid gray;
+}
+
+.card-header-text{
+  font-size: 11px;
+}
+
+.loc{
+  font-size: 11px;
+  margin-left: 20px;
+}
+
+.prod{
+  margin-left: 20px;
+}
+
+
+.desc{
+  font-size: 14px;
+}

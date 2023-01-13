@@ -1,0 +1,77 @@
+<div class="product">
+  <mat-grid-list cols="8" rowHeight="5:2">
+
+    <mat-grid-tile colspan="4" rowspan="1">
+      <div class="card-header-text">UniqueId: {{uniqueId}}</div>
+      <div class="loc">location</div>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1"></mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">
+      <button mat-raised-button>Save auction</button>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">
+      <button mat-raised-button>00.01.00</button>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">
+      <button mat-raised-button>Current auction</button>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+
+  <mat-grid-list class="card-header-text" cols="8" rowHeight="6:3">
+
+    <mat-grid-tile colspan="1" class="prod" rowspan="1">
+      <b>{{productName}}</b>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">
+      <b>{{perQTL}}</b>/QTL
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="1">
+      {{actualQTL}}QTL
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="1">
+      Best bid price: <b>{{bidPrice}}</b>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1"></mat-grid-tile>
+    <mat-grid-tile colspan="2">
+      <button mat-raised-button (click)="hide()">view more details</button>
+    </mat-grid-tile>
+
+
+  </mat-grid-list>
+  <div [hidden]="ishidden">
+    <mat-grid-list cols="8" rowHeight="8:2">
+
+      <mat-grid-tile colspan="1">
+        <div class="card-header-text">Description</div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1"></mat-grid-tile>
+      <mat-grid-tile colspan="1"></mat-grid-tile>
+      <mat-grid-tile colspan="1">
+        <div class="card-header-text">Extension</div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1"></mat-grid-tile>
+      <mat-grid-tile colspan="1"></mat-grid-tile>
+      <mat-grid-tile colspan="2" rowspan="2">
+        <button mat-raised-button [hidden]="ishidden">View Parameter</button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div [hidden]="ishidden">
+    <mat-grid-list cols="7" rowHeight="9:1">
+      <mat-grid-tile colspan="2" class="desc">
+        <b>{{description}}</b>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2">
+        {{extension}}
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </div>
+
+
+
+</div>
